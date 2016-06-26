@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="D:\1\jquery-1.7.1.js"></script>
+<script type="text/javascript" src="D:\1\jquery.qrcode.js"></script>
+<script type="text/javascript" src="D:\1\qrcode.js"></script>
+<script>
+	$(document).ready(function() {
+		//当前日期
+		var date1=new Date();
+		var year=date1.getFullYear();
+		var month=date1.getMonth()+1;
+		var day=date1.getDate();
+		var nowToay=year+"年"+month+"月"+day+"日";
+		//设定的日期
+		var day1="2015年10月16日";
+		var day2="2015年11月16日";
+		var day3="2015年11月26日";
+		var day4="2015年12月6日";
+		var day5="2015年12月16日";
+		var day6="2015年12月26日";
+		 if (nowToay == day1) {
+			$("#QRCode").qrcode("https://www.baidu.com/");
+		} else {
+			$("#hideImg").hide();
+		} 
+	});
+</script>
+</head>
+<body>
+	<img src="D:\1.png"  alt="上海鲜花港 - 郁金香" />
+	<div id="hideImg">
+		<div id="QRCode" onclick="text()">BBBBBBBBBBBBBBBBBBBBBBBBBB</div>
+		<span></span>
+	</div>
+</body>
+</html>
